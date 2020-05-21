@@ -12,18 +12,19 @@ public class Prob04 {
 	public static char[] reverse(String str) {
 		char[] result = str.toCharArray();
 
-		int swap =0;
+		
 		/* 코드를 완성합니다 */
 		// 배열의 맨 뒤쪽 주소부터 반대로 호출 되도록 해야함 
-		for(int i = 0; i < result.length ; i++) {
-			for(int j = result.length; j > i ; j--) {
-				swap = result[j];
-				result[j] =.;
-				c1 = swap;
+		
+     	int count = result.length / 2;
+			for(int j = 0; j < count ; j++) {
+				char swap = result[j];
+				result[j] = result[result.length -1 -j];
+			result[result.length -1 -j] = swap;
 			}
-		}
 		
 		
+			
 		return result;
 	}
 
